@@ -14,7 +14,7 @@ function SpotDetailComp() {
     const sessionUser = useSelector(state => state.session.user);
     const { setModalContent } = useModal(); // Modal Control
 
-    const [selectedReviewId, setSelectedReviewId] = useState(null); // Track review to delete
+    const [ setSelectedReviewId ] = useState(null); // Track review to delete
 
     useEffect(() => {
         dispatch(loadOneSpotThunk(id)); 
