@@ -1,0 +1,97 @@
+.profile-dropdown-container {
+    position: relative;
+  }
+  
+  .profile-menu-button {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .profile-menu-button:hover {
+    transform: scale(1.1);
+    color: #ff5a5f;
+  }
+  
+  .profile-dropdown {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    padding: 10px;
+    list-style: none;
+    margin: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .profile-dropdown.hidden {
+    display: none;
+  }
+  
+  .profile-dropdown li {
+    font-size: 14px;
+    color: #333;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .profile-dropdown li:last-child {
+    border-bottom: none;
+  }
+  
+  .manage-spots-link {
+    text-decoration: none;
+    color: #000000 !important;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .manage-spots-link:hover {
+    color: #000000;
+  }
+  
+  .logout-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #E74C3C;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .logout-button:hover {
+    background-color: #ff1900;
+    font-weight: bold;
+  }
+  
+  .manage-reviews-link {
+    text-decoration: none;
+    color: #000000 !important;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .manage-reviews-link:hover {
+    color: #000000;
+  }

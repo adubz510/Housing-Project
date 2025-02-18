@@ -1,0 +1,113 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Modal Heading */
+  h1 {
+    text-align: center;
+    color: #2C3E50;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  /* Form Styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Label Styling */
+  label {
+    font-size: 16px;
+    color: #2C3E50;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  /* Input Fields */
+  input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #3498db;
+  }
+  
+  /* Error Message Styling */
+  p {
+    color: #e74c3c; /* Red color for errors */
+    font-size: 14px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+  }
+  
+  /* Submit Button Styling */
+  button {
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  /* Modal Container */
+  .modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+  }
+  
+  /* Close Modal Button (Optional) */
+  .close-modal-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+  }
+  
+  .close-modal-btn:hover {
+    color: #2C3E50;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 600px) {
+    form {
+      width: 90%;
+    }
+  }

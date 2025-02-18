@@ -1,0 +1,22 @@
+/* TODO: Add sitewide styles */
+/* Basic reset to remove default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  
+  /* Style for the Welcome heading */
+  h1 {
+    text-align: center;
+    color: #2c3e50;
+  }

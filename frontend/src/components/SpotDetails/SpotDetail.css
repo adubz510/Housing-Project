@@ -1,0 +1,111 @@
+.spot-details {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Image Layout */
+.spot-images {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.other-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.other-images img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Reservation Box */
+.spot-reservation-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.spot-reservation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 300px;
+    text-align: center;
+}
+
+.spot-price {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.night-text {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.spot-rating {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.reserve-button {
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.reserve-button:hover {
+    background-color: #e04e52;
+}
+
+/* Reviews Section */
+.post-review-button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.reviews {
+    margin-top: 20px;
+}
+
+.review {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.review-date {
+    font-size: 12px;
+    color: gray;
+}
+
+.post-review-button {
+    background-color: grey;
+    color: white;
+}

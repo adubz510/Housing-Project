@@ -1,0 +1,42 @@
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Align buttons horizontally */
+    align-items: center; /* Align buttons vertically */
+    width: 100%;
+}
+
+.confirm-delete,
+.cancel-delete {
+    flex: 1; /* Make both buttons equal in size */
+    max-width: 150px; /* Ensures buttons do not stretch too much */
+    height: 45px; /* Matches height of update button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Button Colors */
+.confirm-delete {
+    background-color: #d9534f; /* Same as delete button */
+    color: white;
+}
+
+.confirm-delete:hover {
+    background-color: #c9302c;
+}
+
+.cancel-delete {
+    background-color: #333; /* Matches update button */
+    color: white;
+}
+
+.cancel-delete:hover {
+    background-color: #555;
+}

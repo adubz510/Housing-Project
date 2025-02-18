@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .navbar {
+    background-color: #7f3dc6;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+  }
+
+  .navbar ul {
+    display:flex;
+    justify-content:flex-end;
+    align-items: center;
+    list-style-type: none;
+  }
+  
+  .navbar li {
+    margin-right: 5px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .logo {
+    color: black;
+  }
+  
+  .navbar li:last-child {
+    margin-left: auto;
+  }
+  
+  .navbar li:last-child button {
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 24px; 
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .navbar li:last-child button:hover {
+    transform: scale(1.2);
+    color: #000000; 
+  }
+  .menu-container {
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 24px; 
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+  
+  .profile-dropdown {
+    position: absolute;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: fit-content;
+    align-items: center;
+    padding: 5px;
+    list-style: none;
+    margin: 0;
+    z-index: 5;
+    display: none;
+  }
+  
+  .profile-dropdown.hidden {
+    display: none;
+  }
+  
+  .profile-dropdown li {
+    position: block;
+    padding: 5px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+  }
+ 
+  
+  .profile-dropdown li button {
+    width: 100%;
+    padding: 10px;
+    background-color: #E74C3C;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .profile-dropdown li button:hover {
+    color: black;
+    background-color: #ff1900; 
+    font-weight: bold;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .create-spot-button {
+    text-decoration: none;
+    color: white;
+    background-color: #ff5a5f;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+    font-size: 14px;
+  }
+  
+  .create-spot-button:hover {
+    background: white;
+    color: #ff5a5f;
+    border: 1px solid #ff5a5f;
+  }

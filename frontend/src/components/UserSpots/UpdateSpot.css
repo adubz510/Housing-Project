@@ -1,0 +1,50 @@
+.update-spot-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.update-spot-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.update-spot-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.update-spot-form label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.update-spot-form input,
+.update-spot-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.update-spot-form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.update-button {
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.update-button:hover {
+    background-color: #e04a4f;
+}
