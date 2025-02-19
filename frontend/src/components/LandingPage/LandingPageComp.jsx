@@ -38,7 +38,7 @@ function LandingPageComp() {
                             <div className="spot-rating">
                                 ★ {spot.avgRating ? parseFloat(spot.avgRating).toFixed(1) : "New"}
                             </div>
-                            <div className="spot-price">${spot.price.toFixed(2)}/night</div>
+                            <div className="spot-price">${spot.price}/night</div>
                         </div>
                     </div>
                 ))}
