@@ -37,7 +37,7 @@ function UserSpotsComp() {
                             <img src={spot.previewImage || "/placeholder.jpg"} alt={spot.name} />
                             <div className="spot-info">
                                 <p>{spot.city}, {spot.state}</p>
-                                <p className="spot-price"><strong>${spot.price}</strong> night</p>
+                                <p className="spot-"><strong>${spot.price}</strong> night</p>
                                 <div className="spot-buttons">
                                     <button className="update-button" onClick={() => navigate(`/spots/${spot.id}/edit`)}>Update</button>
                                     <button className="delete-button" onClick={() => handleDeleteClick(spot)}>Delete</button>

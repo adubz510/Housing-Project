@@ -62,8 +62,8 @@ function SpotDetailComp() {
             {/* Pricing & Reservation Section */}
             <div className="spot-reservation-container">
                 <div className="spot-reservation">
-                    <div className="spot-price">
-                        <strong>${spot.price.toFixed(2)}</strong> <span className="night-text">/ night</span>
+                    <div className="spot-">
+                        <strong>${spot.price}</strong> <span className="night-text">/ night</span>
                     </div>
                     <div className="spot-rating">
                         ★ {typeof avgRating === "number" && !isNaN(avgRating)

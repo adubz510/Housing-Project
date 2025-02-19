@@ -71,7 +71,7 @@ function UpdateSpotComp() {
             ...formData,
             lat: latValue,
             lng: lngValue,
-            price: parseFloat(parseFloat(formData.price).toFixed(2)),
+            price: parseFloat(parseFloat(formData.price)),
             images: formData.images.filter(url => url.trim() !== ""),
         };
 
