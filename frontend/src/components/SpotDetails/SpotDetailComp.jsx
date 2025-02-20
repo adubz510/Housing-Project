@@ -12,7 +12,7 @@ function SpotDetailComp() {
     const dispatch = useDispatch();
     const spot = useSelector(state => state.spots[id]);
     const sessionUser = useSelector(state => state.session.user);
-    const { setModalContent } = useModal(); // Modal Control
+    const { setModalContent } = useModal(); 
 
     const [selectedReviewId, setSelectedReviewId] = useState(null); // Track selected review ID for deletion
 
