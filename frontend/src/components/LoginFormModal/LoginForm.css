@@ -74,6 +74,12 @@ button:hover {
   transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  background-color: #bdc3c7; /* Gray out */
+}
+
 /* Modal Container */
 .modal-container {
   display: flex;

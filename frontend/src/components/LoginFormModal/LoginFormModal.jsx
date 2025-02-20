@@ -1,5 +1,3 @@
-// frontend/src/components/LoginFormModal/LoginFormModal.jsx
-
 import { useState } from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch } from 'react-redux';
@@ -28,7 +26,7 @@ function LoginFormModal() {
 
   // Demo User Login
   const handleDemoLogin = () => {
-    return dispatch(sessionActions.login({ credential: "Demo-lition", password: "password" }))
+    return dispatch(sessionActions.login({ credential: "Fake-User3", password: "password4" }))
       .then(closeModal)
       .catch(async (res) => {
         const data = await res.json();
@@ -37,6 +35,8 @@ function LoginFormModal() {
         }
       });
   };
+
+  const isLoginDisabled = !credential || credential.length < 4 || !password || password.length < 6;
 
   return (
     <>
@@ -63,7 +63,7 @@ function LoginFormModal() {
         {errors.credential && (
           <p>{errors.credential}</p>
         )}
-        <button type="submit">Log In</button>
+        <button type="submit" disabled={isLoginDisabled}>Log In</button>
         <button type="button" className="demo-user-button" onClick={handleDemoLogin}>Demo User</button>
       </form>
     </>

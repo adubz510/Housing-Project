@@ -14,7 +14,7 @@ function SpotDetailComp() {
     const sessionUser = useSelector(state => state.session.user);
     const { setModalContent } = useModal(); // Modal Control
 
-    const [ setSelectedReviewId ] = useState(null); // Track review to delete
+    const [selectedReviewId, setSelectedReviewId] = useState(null); // Track selected review ID for deletion
 
     useEffect(() => {
         dispatch(loadOneSpotThunk(id)); 
@@ -31,9 +31,12 @@ function SpotDetailComp() {
 
     // Open Modal for Delete Review
     const openDeleteModal = (reviewId) => {
-        setSelectedReviewId(reviewId);
+        setSelectedReviewId(reviewId);  // Update the selected review ID
         setModalContent(<DeleteReviewModal reviewId={reviewId} spotId={id} />);
     };
+
+    // Sort reviews by createdAt in descending order to show most recent first
+    const sortedReviews = spot.reviews?.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
     return (
         <div className="spot-details-container">
@@ -88,12 +91,12 @@ function SpotDetailComp() {
             </h2>
 
             {/* "Post Your Review" Button - Visible for logged-in users */}
-            {sessionUser && <PostReviewButtonComp spotId={spot.id}/>}
+            {sessionUser && sessionUser.id !== spot.ownerId && <PostReviewButtonComp spotId={spot.id}/>}
 
             {/* Reviews List */}
-            {spot.reviews?.length > 0 ? (
+            {sortedReviews?.length > 0 ? (
                 <div className="reviews">
-                    {spot.reviews.map((review, index) => (
+                    {sortedReviews.map((review, index) => (
                         <div key={index} className="review">
                             <strong>{review.User?.firstName}</strong>
                             <p className="review-date">

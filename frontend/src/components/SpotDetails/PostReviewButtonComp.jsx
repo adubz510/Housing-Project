@@ -59,6 +59,8 @@ function PostReviewButtonComp({ spotId }) {
 
     if (hasSubmitted) return null; // Hide the button after successful submission
 
+    const isSubmitDisabled = review.length < 10 || stars === 0; // Disable if review < 10 chars or no stars selected
+
     return (
         <>
             <button className="post-review-button" onClick={() => setShowModal(true)}>
@@ -108,7 +110,11 @@ function PostReviewButtonComp({ spotId }) {
                         </div>
 
                         {/* Submit Button (No Blocking Click) */}
-                        <button className="submit-review-button" onClick={handleSubmit}>
+                        <button
+                            className="submit-review-button"
+                            onClick={handleSubmit}
+                            disabled={isSubmitDisabled} // Disable button if conditions not met
+                        >
                             Submit Your Review
                         </button>
                     </div>

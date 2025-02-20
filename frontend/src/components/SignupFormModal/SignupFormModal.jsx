@@ -1,5 +1,3 @@
-// frontend/src/components/SignupFormPage/SignupFormPage.jsx
-
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useModal } from '../../context/Modal';
@@ -16,6 +14,14 @@ function SignupFormModal() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState({});
   const { closeModal } = useModal();
+
+  const isButtonDisabled =
+    !email ||
+    !username || username.length < 4 ||
+    !firstName ||
+    !lastName ||
+    !password || password.length < 6 ||
+    !confirmPassword;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -109,7 +115,7 @@ function SignupFormModal() {
         {errors.confirmPassword && (
           <p>{errors.confirmPassword}</p>
         )}
-        <button type="submit">Sign Up</button>
+        <button type="submit" disabled={isButtonDisabled} style={{ pointerEvents: isButtonDisabled ? 'none' : 'auto', opacity: isButtonDisabled ? 0.6 : 1 }}>Sign Up</button>
       </form>
     </>
   );
